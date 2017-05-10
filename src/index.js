@@ -17,7 +17,6 @@ import HomeScreen from './screens/home'
 import RegisterScreen from './screens/register'
 
 const history = syncHistoryWithStore(hashHistory, store)
-
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
