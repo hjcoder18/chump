@@ -15,51 +15,52 @@ class HomeScreen extends Component {
     else
       getUser()
   }
-
+   
   render() {
-
+	  var height = 0;
+	  $('div.box p').each(function(i, value){
+	      height += parseInt($(this).height());
+	  });
+	  height += '';
+	  $('div').animate({scrollTop: height}, "fast");
+	  
     const {user, messages} = this.props
+    
     if (!user) {
       requestAnimationFrame(()=>hashHistory.push('/login'))
       return null
     }
 
     let textInput = null
-
-
+    
     const submit = (e)=>{
       e.preventDefault()
       sendMessage({value: textInput.value})
       textInput.value = ''
+    	  console.log(textInput);
     }
 
     return (
-    		<main className="container">
-      <div className="panel panel-primary">
-      
-      <div className="panel-heading"><h1 className="myTitle">Chat</h1></div>
-      <div className="panel-body">
-      {messages.map((msg)=>{
-          if (msg.type === 'text')
-              return (
-//                <table className="table">
-//              <tbody>
-//              <tr>
-                <p className="text-border" key={msg.id}> <p className="myUser">{msg.user.username}</p> -{msg.data.value} </p>
-//              </tr>
-//          </tbody>
-//          </table>
-        )
-      })}
-      <div className="row text-area">
-        <form onSubmit={submit}>
-        	<input className="col-md-11" id ="rc" required type="text" ref={el=>textInput = el}/>
-            <button className="btn-primary btn-sm col-md-1">Send</button>
-            
-        </form>
-        </div>
-        </div>
-      </div>
+      <main className="container">	            
+	      <div className="panel panel-primary">
+	      <div className="panel-heading"><h1 className="myTitle">Chat</h1></div>
+	      <div className="panel-body" id="panel-border">
+		      <div className="box">
+			      {messages.map((msg)=>{
+			          if (msg.type === 'text')
+			              return (
+			                <p className="text-border" key={msg.id}> <p className="myUser">{msg.user.username}:</p> {msg.data.value} </p>
+			              )
+			      })}
+		      </div>
+		      <div className="row text-area">
+		        <form onSubmit={submit}>
+		        	<input className="col-md-11" id ="rc" required type="text" ref={el=>textInput = el}/>
+		            <button className="btn-primary btn-sm col-md-1">Send</button>
+		        </form>
+		      </div>
+	        </div>
+	      </div>
       </main>
     )
   }

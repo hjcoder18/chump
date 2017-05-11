@@ -19,23 +19,33 @@ function LoginScreen({user}){
       hashHistory.push('/')
     })
   }
-
   return (
-    <form onSubmit={submit}>
-      <fieldset>
-        <legend>Login:</legend>
-        <div>
-          <label>Username: <input required type="text" ref={el=>usernameInput = el}/></label>
-        </div>
-        <div>
-          <label>Password: <input required type="password" ref={el=>passwordInput = el}/></label>
-        </div>
-        <div>
-          <Link to="/register">Register</Link>
-          <button>Login</button>
-        </div>
-      </fieldset>
-    </form>
+    <main className="container">
+    	<div className="jumbotron jumbotron-bg">
+    		<div className="col-md-8 jumbotron-text">
+    			<h2>Chump</h2>
+    			<h3>The simpliest chat application ever.</h3>
+    			<p>So easy, even your grandmother can use it.</p>
+    		</div>
+    		<div className="col-md-4 login-bg">
+			    <form onSubmit={submit}>
+			      <fieldset>
+			        <legend>Login:</legend>
+			        <div>
+			          <label>Username: <input required type="text" ref={el=>usernameInput = el}/></label>
+			        </div>
+			        <div>
+			          <label>Password: <input required type="password" ref={el=>passwordInput = el}/></label>
+			        </div>
+			        <div>
+			          <Link className="register" to="/register">Register</Link>
+			          <button>Login</button>
+			        </div>
+			      </fieldset>
+			    </form>
+		    </div>
+		</div>
+    </main>
   )
 }
 
