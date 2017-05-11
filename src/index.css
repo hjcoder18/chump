@@ -3,3 +3,73 @@ body {
   padding: 40px;
   font-family: sans-serif;
 }
+.text-border {
+	border: 1px solid #9efdff;
+    background-color: #9efdff;
+    border-radius: 70px 5px 245px 70px;
+    padding:10px;
+}
+.myUser{
+  font-weight: bold;
+  font-size: 15px;
+  color: #670EB8;
+  display: inline;
+}
+
+.myTitle{
+  font-weight: bold;
+  font-size: 70px;
+  color: black;
+  letter-spacing:25px;
+  text-align:center;
+  font-family: Bodoni MT Poster;
+
+}
+.text-area {
+	border-top: 1px solid black;
+}
+.panel-primary {
+    border-color: #ffd368;
+}
+.panel-primary>.panel-heading {
+    color: #fff;
+    background-color: #ffd368;
+    border-color: #ffd368;
+}
+.panel-body {
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 0px;
+    padding-left: 15px;
+}
+.btn-group-sm>.btn, .btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 0px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #380c0c;
+    border-color: #380c0c;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #000000;
+    border-color: #380c0c;
+}
+#rc {
+  border: -5px solid #e4fff9;
+  height:32px;
+  background-color: #e4fff9;
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.something {
+	background-color: yellow;
+}
+
