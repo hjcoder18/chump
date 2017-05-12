@@ -3,12 +3,12 @@ body {
   padding: 40px;
   font-family: sans-serif;
   margin:0;
-    padding:0;
-    background:url("https://static.vecteezy.com/system/resources/previews/000/106/719/original/vector-abstract-blue-wave-background.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  padding:0;
+  background:url("https://static.vecteezy.com/system/resources/previews/000/106/719/original/vector-abstract-blue-wave-background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .icon {
 	text-align:center;
@@ -185,7 +185,6 @@ body {
 	    width: 94%;
 	}
 }
-
 @media screen and (min-width: 1200px) {
 	#rc {
 	    border: -5px solid #e4fff9;
