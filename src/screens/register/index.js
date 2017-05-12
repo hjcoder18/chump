@@ -22,24 +22,30 @@ function RegisterScreen({user}){
   }
 
   return (
-    <form onSubmit={submit}>
-      <fieldset>
-        <legend>Login:</legend>
-        <div>
-          <label>Username: <input required type="text" ref={el=>usernameInput = el}/></label>
-        </div>
-        <div>
-          <label>Password: <input required type="password" ref={el=>passwordInput = el}/></label>
-        </div>
-        <div>
-          <label>Email: <input required type="email" ref={el=>emailInput = el}/></label>
-        </div>
-        <div>
-          <Link to="/login">Login</Link>
-          <button>Register</button>
-        </div>
-      </fieldset>
-    </form>
+	<main className="container">
+	    <div className="row">
+		   	<div className="col-md-12 col-height">
+			    <form className="login-bg" onSubmit={submit}>
+			      <fieldset>
+			        <legend>Login:</legend>
+			        <div>
+			          <label>Username: <input required type="text" ref={el=>usernameInput = el}/></label>
+			        </div>
+			        <div>
+			          <label>Password: <input required type="password" ref={el=>passwordInput = el}/></label>
+			        </div>
+			        <div className="reg-email">
+			          <label>Email: <input required type="email" ref={el=>emailInput = el}/></label>
+			        </div>
+			        <div>
+			          <Link className="register" to="/login">Login</Link>
+			          <button>Register</button>
+			        </div>
+			      </fieldset>
+			    </form>
+			</div>
+		</div>
+	</main>
   )
 }
 
