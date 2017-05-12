@@ -17,12 +17,12 @@ class HomeScreen extends Component {
   }
    
   render() {
-	  var height = 0;
-	  $('div.box p').each(function(i, value){
-	      height += parseInt($(this).height());
-	  });
-	  height += '';
-	  $('div').animate({scrollTop: height}, "fast");
+	var height = 0;
+	$('div.box p').each(function(i, value){
+	    height += parseInt($(this).height());
+	});
+	height += '';
+	$('div').animate({scrollTop: height}, "fast");
 	  
     const {user, messages} = this.props
     
@@ -53,10 +53,10 @@ class HomeScreen extends Component {
 			              )
 			      })}
 		      </div>
-		      <div className="row text-area">
+		      <div className="text-area">
 		        <form onSubmit={submit}>
-		        	<input className="col-md-11" id ="rc" required type="text" ref={el=>textInput = el}/>
-		            <button className="btn-primary btn-sm col-md-1">Send</button>
+		        	<input id="rc" required type="text" ref={el=>textInput = el}/>
+		            <button className="btn-primary btn-sm">Send</button>
 		        </form>
 		      </div>
 	        </div>
